@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CF contest Visualiser</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <!-- <div id="chart_div"></div>  -->
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js"></script>
+
+  </head>
+
+  <body>
+     
+    <!--header-->
+    <div class="header">
+        <!--logo-->
+        <img src="cplogo.png" class="logo">
+        <div id ="title_text"><h4>CF-VIS</h4></div>
+    </div>
+
+    <!---------------------------------------------->
+    <!--main-->
+    <div class="main">
+         <!--Handle Input-->
+        <form action="" id="handleform">
+       <div class="input">
+          <input type="text"  id ="myinput" class="myInput" placeholder="Codeforces Handle">
+          <input type="submit" id="mybtn" class="myBtn">
+       </div>
+      </form>
+    </div>
+
+       <!--root-->
+         <div id="profile">
+           <div id="profile-handle" class="profile-name"></div>
+           <div id="profile-photo"></div>
+           <div id="profile-fullname" class="profile-name"></div>
+           <div id="profile-city-country" class="profile-name"></div>
+           <div id="profile-rating" class="profile-name"></div>
+           <div id="profile-rank" class="profile-name"></div>
+         </div>
+
+        
+
+         </div>
+     
+         <div id="piechart_3d" style="width: 700px; height: 500px;"></div>
+         <div id="piechart_3d_2" style="width: 700px; height: 500px;"></div>
+         <div id="piechart_3d_3" style="width: 900px; height: 500px;"></div>
+         <div id="chart_div"></div>
+        
+        
+    <!---------------------------------------------->
+    <!--footer-->
+    <div id="footer"><a href="www.google.com" target="blank"><img src="github.png" height="30px" width="30px" id="github"></a></div>
+  </body>
+</html>
