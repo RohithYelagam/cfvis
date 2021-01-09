@@ -186,6 +186,21 @@ function clearData(){
     document.getElementById('profile-rating').innerHTML = "";
     document.getElementById('profile-rank').innerHTML = "";
     $('#profile').hide();
+     arr = {};
+ rating_arr = {};
+ time_arr  = {};
+ tle = 0;
+ ac = 0;
+ rte = 0;
+ wa = 0;
+ cmp = 0;
+ me=0;
+ total=0;
+ rating_count=0;
+ handle='';
+ tag_a=0,tag_b=0,tag_c=0,tag_d=0,tag_e=0,tag_f=0,tag_g=0,tag_h=0,tag_i=0,tag_j=0,tag_k=0,tag_l=0;
+ tag_arr ={};
+    
 }
 
 

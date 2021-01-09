@@ -86,7 +86,11 @@ html{
   text-decoration: solid;
  
 }
-
+#chart_div{
+  width:100%;
+  height:auto;
+  box-shadow: 0 8px 6px -6px black;
+}
   #profile{
     display: block;
     margin: 5px auto;
@@ -167,7 +171,7 @@ html{
   }
   #footer{
     display: block;
-    margin: 0 auto;
+    margin: 10px auto;
     height: 70px;
     width: 500px;
     padding: 20px;
