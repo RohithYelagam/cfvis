@@ -316,10 +316,16 @@ function drawChart() {
             direction:-1, 
             slantedText:true, 
             slantedTextAngle:45,
+            gridlines: {
+                color: "transparent",
+              },
             
           },
           vAxis: {
            // title: 'Rating'
+            gridlines: {
+                color: "transparent",
+              },
           },
           titleTextStyle: {
             font:18,
