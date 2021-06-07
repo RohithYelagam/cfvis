@@ -49,7 +49,7 @@ $(document).ready(function(){
    // console.log(data.result[0].titlePhoto);
       const aa = document.getElementById('profile-photo');
       const pho = document.createElement('img');
-      pho.setAttribute('src','https:'+data.result[0].titlePhoto);
+      pho.setAttribute('src',data.result[0].titlePhoto);
       var fullname = data.result[0].firstName+'  '+data.result[0].lastName;
       var city = 'City:'+data.result[0].city+'   Country:'+data.result[0].country;
       var rating = 'Rating: '+data.result[0].rating+'    MaxRating: '+data.result[0].maxRating;
