@@ -38,7 +38,7 @@ $(document).ready(function(){
     handle = $('#myinput').val().trim();
 
     req1 = $.get(url+'user.info?handles='+handle,function(data,status){
-     // console.log(data);
+
 
      if (data.result.length < 1) {
         err_message('handleDiv', 'No submissions');
