@@ -1,3 +1,3 @@
 ### CF-VIS
-#### Codeforces Visualizer
+#### <a href="https://rohithyelagam.github.io/cfvis/">Codeforces Visualizer</a>
 
