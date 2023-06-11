@@ -7,7 +7,7 @@ function Verdict(props) {
   const options = {
     titlePosition: 'none',
     pieHole: 0.3,
-    is3D: false,
+    is3D: true,
     backgroundColor:"#161625",
     pieSliceTextStyle: {
       color: 'white',

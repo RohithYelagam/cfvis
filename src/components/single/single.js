@@ -6,12 +6,11 @@ import ReactLoading from 'react-loading';
 import "../../css/single.css"
 
 function Single() {
-
+  const [errh,setErrh] = useState("");
   const [handle,setHandle] = useState("");
   const [a,setA] = useState(0);
   const [b,setB] = useState(0);
   const [c,setC] = useState(0);
-  const [err,setErr] = useState(false);
   const [user,setUser] = useState(null);
   const [submissions, setSubmissions] = useState(null);
   const [ratings, setRatings] = useState(null);
@@ -19,24 +18,26 @@ function Single() {
 const query = "https://codeforces.com/api/";
 
   const handlechange=(event)=>{
-    // setUser(null);
     setHandle(event.target.value);
   }
 
   const handlesubmit = (event)=>{
     event.preventDefault();
+    if(handle===""){
+      return;
+    }
     setUser(null);
     setA(1);
     setB(1);
     setC(1);
-    setErr(false);
     axios.get(query+`user.info?handles=${handle}`)
     .then((response) => {
       setA(2);
       setUser(response.data.result[0]);
     })
     .catch((error) => {
-      setErr(true);
+      setErrh(handle);
+      setA(3);
       console.log(error.message);
     })
 
@@ -46,7 +47,8 @@ const query = "https://codeforces.com/api/";
       setSubmissions(response.data.result)
     })
     .catch((error) => {
-      setErr(true);
+      setErrh(handle);
+      setB(3);
       console.log(error.message);
     });
     
@@ -57,7 +59,8 @@ const query = "https://codeforces.com/api/";
       setRatings(aa);
     })
     .catch((error) => {
-      setErr(true);
+      setErrh(handle);
+      setC(3);
       console.log(error.message);
     });
     }
@@ -73,20 +76,20 @@ const query = "https://codeforces.com/api/";
 
       <div>
 
-        {(a==0 && b==0 && c==0)?(
-          <div></div>
+        {(a===2 && b===2 && c===2)?(
+          <div className="result">
+            <div><Data user={user} handle={handle} ratings={ratings} submissions={submissions}/></div>
+          </div>
         ):(
           <div>
-            {(a==1 || b==1 || c==1)?(
+            {(a===1 && b===1 && c===1)?(
              <div className='loading'><ReactLoading type="spokes" color="#357EDD" height={100} width={100} /></div>
           ):(
             <div>
-              {(err)?(
-                <div>data not found</div>
+              {(a===3 || b===3 || c===3)?(
+                <div>User with {errh} not found</div>
               ):(
-                <div className="result">
-                  <div ><Data user={user} handle={handle} ratings={ratings} submissions={submissions}/></div>
-                </div>
+                <div></div>
               )}
             </div>
           )}

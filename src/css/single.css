@@ -1,6 +1,5 @@
 
 .single{
-    
     min-height:400px;
     display: flex;
     flex-direction: column;
@@ -28,10 +27,6 @@
     background-color: rgb(81, 81, 255);
     outline: none;
     border: none;
-}
-.result{
-    display: flex;
-    flex-direction: column;
 }
 
 .loading{

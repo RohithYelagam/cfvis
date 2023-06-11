@@ -6,7 +6,7 @@ function Tag(props) {
     
   const options = {
     titlePosition: 'none',
-    pieHole: 0.3,
+    pieHole: 0.4,
     is3D: false,
     backgroundColor:"#161625",
     pieSliceTextStyle: {
@@ -31,8 +31,8 @@ function Tag(props) {
   return (
     <div>
          <Chart
-            height="300px"
-            width="600px"
+            height="400px"
+            width="700px"
             chartType="PieChart"
             data={props.tag}
             options={options}
