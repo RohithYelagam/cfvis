@@ -15,6 +15,7 @@ function Single() {
   const [submissions, setSubmissions] = useState(null);
   const [ratings, setRatings] = useState(null);
   const [testing,setTesting] = useState(null);
+  const [test2,setTest2] = useState(null);
   
 const query = "https://codeforces.com/api/";
 
