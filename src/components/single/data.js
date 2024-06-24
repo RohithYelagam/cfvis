@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Verdict from "./verdict";
 import Lang from "./lang";
 import Tag from "./tag";
@@ -10,9 +10,9 @@ import "../../css/data.css";
 
 function Data(props) {
 
-  const [user,setUser] = useState(props.user);
+  const user = useState(props.user);
   const [ratings, setRatings] = useState([['time',props.handle],[new Date(props.user.registrationTimeSeconds*1000),props.ratings[0].oldRating]]);
-  const [sub, setSub] = useState(props.submissions);
+  const sub = useState(props.submissions);
 
   const [verd,setVerd] =useState([['Verdict','Count']]);
   const [lang,setLang] =useState([['Language','Count']]);

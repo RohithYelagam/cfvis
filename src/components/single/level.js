@@ -31,7 +31,7 @@ function Level(props) {
     for(const x in aa){
       setIndex((cur)=>[...cur,[aa[x][0],aa[x][1]]]);
     }
-  },[])
+  },[props.level])
 
   return (
     <div>

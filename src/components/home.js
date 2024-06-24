@@ -9,7 +9,7 @@ function Home() {
   const [idx,setIdx] = useState(0);
   const [text,setText] = useState("");
   const [flg,setFlg] = useState(1);
-  const [fulltext,setFulltext] = useState("A customised tool to analyse codeforces user statitics..!");
+  const fulltext = "A customised tool to analyse codeforces user statitics..!";
   
   useEffect(()=>{
     if(idx < fulltext.length){
@@ -18,7 +18,7 @@ function Home() {
         setIdx(idx + 1);
       },20)
     }
-  },[idx]);
+  });
 
   const single=()=>{
     setFlg(1);
@@ -41,7 +41,7 @@ function Home() {
       <div className="description" id='description'>{text}</div>
       
       <div className="subject">
-          {(flg==1)?(
+          {(flg===1)?(
             <Single/>
           ):(
             <Compare/>
